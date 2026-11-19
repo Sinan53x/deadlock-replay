@@ -1,0 +1,14 @@
+{
+  "name": "@deadlock-replay/parser",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": "./src/index.js",
+  "bin": { "dr-timeline": "./src/cli.js" },
+  "scripts": {
+    "timeline": "node src/cli.js",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "deadem": "4.0.2"
+  }
+}

@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - uses: actions/cache@v4
+        with:
+          path: fixtures/*.dem
+          key: fixtures-${{ hashFiles('fixtures/fetch.sh') }}
+      - run: fixtures/fetch.sh
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm build

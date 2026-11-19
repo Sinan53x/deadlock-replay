@@ -1,0 +1,9 @@
+{
+  "name": "@deadlock-replay/view2d",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": "./src/index.js",
+  "scripts": {
+    "test": "node --test test/"
+  }
+}

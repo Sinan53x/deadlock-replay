@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deadlock Replay</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <header>
+    <h1>Deadlock Replay</h1>
+    <span class="match" id="match"></span>
+    <div class="modes" role="tablist">
+      <button class="mode active" aria-selected="true">2D</button>
+      <button class="mode" disabled title="3D view: roadmap week 2">3D</button>
+    </div>
+  </header>
+  <main>
+    <canvas id="map" width="900" height="900"></canvas>
+    <aside>
+      <h2>Kill feed</h2>
+      <ol id="kills"></ol>
+    </aside>
+  </main>
+  <footer>
+    <button id="play" aria-label="Play">▶</button>
+    <input id="scrub" type="range" min="0" value="0" step="1" aria-label="Match time">
+    <span id="clock">00:00</span>
+    <select id="speed" aria-label="Playback speed">
+      <option value="1">1×</option>
+      <option value="4">4×</option>
+      <option value="16" selected>16×</option>
+      <option value="64">64×</option>
+    </select>
+  </footer>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

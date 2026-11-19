@@ -1,0 +1,12 @@
+{
+  "name": "deadlock-replay",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "test": "pnpm -r test",
+    "timeline": "pnpm --filter @deadlock-replay/parser timeline",
+    "dev": "pnpm --filter @deadlock-replay/web dev",
+    "build": "pnpm --filter @deadlock-replay/web build"
+  }
+}
