@@ -6,7 +6,7 @@
   "bin": { "dr-timeline": "./src/cli.js" },
   "scripts": {
     "timeline": "node src/cli.js",
-    "test": "node --test test/"
+    "test": "node --test test/*.test.js"
   },
   "dependencies": {
     "deadem": "4.0.2"
